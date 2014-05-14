@@ -29,9 +29,9 @@ module Spree
     include Spree::Core::S3Support
     supports_s3 :featured_image
 
-    attr_accessible :category_id, :author_id, :title, :abstract, :body, :sticky,
-                    :visible, :published_at, :permalink, :seo_title, :seo_description,
-                    :comma_separated_tags, :related_post_ids, :tag_names, :featured_image
+    # attr_accessible :category_id, :author_id, :title, :abstract, :body, :sticky,
+    #                 :visible, :published_at, :permalink, :seo_title, :seo_description,
+    #                 :comma_separated_tags, :related_post_ids, :tag_names, :featured_image
 
     make_permalink order: :published_at, field: :permalink
 
