@@ -18,7 +18,7 @@ module Spree
     scope :by_usage, -> { with_posts.select('COUNT(blog_tags.id) AS posts_count').order('posts_count DESC') }
     scope :non_trending, -> { where(trending: false) }
 
-    attr_accessible :name, :trending, :description, :permalink
+    # attr_accessible :name, :trending, :description, :permalink
 
     def to_param
       self.permalink.presence || self.name.to_s.to_url
