@@ -11,7 +11,7 @@ module Spree
 
     make_permalink order: :name, field: :permalink
 
-    attr_accessible :name, :description, :permalink
+    # attr_accessible :name, :description, :permalink
 
     def to_param
       self.permalink.presence || self.name.to_s.to_url
